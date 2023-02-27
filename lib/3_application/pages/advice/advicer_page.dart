@@ -10,13 +10,15 @@ import 'package:advice_flutter_app/3_application/pages/advice/widgets/advice_fie
 import 'package:advice_flutter_app/3_application/pages/advice/widgets/custom_button.dart';
 import 'package:advice_flutter_app/3_application/pages/advice/widgets/error_message.dart';
 
+import '../../../injection.dart';
+
 class AdvicerPageWrapperProvider extends StatelessWidget {
   const AdvicerPageWrapperProvider({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => AdvicerBloc(),
+      create: (_) => sl<AdvicerBloc>(),
       child: const AdvicerPage(),
     );
   }

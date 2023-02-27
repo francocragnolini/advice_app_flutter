@@ -13,9 +13,10 @@ const cacheFailure = 'Ups, cache failed, please try again!';
 const generalFailure = "Ups, something went wrong, please try again!";
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
-  AdvicerBloc() : super(AdvicerInitial()) {
+  final AdviceUsecases adviceUsecases;
+  // here in the constructor will receive the usecases through dependecy injection
+  AdvicerBloc(this.adviceUsecases) : super(AdvicerInitial()) {
     // usecases
-    final AdviceUsecases adviceUsecases = AdviceUsecases();
     // you can also use other usecases in this place for example: authentication
 
     on<AdviceRequestedEvent>((event, emit) async {
