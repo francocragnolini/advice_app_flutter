@@ -7,6 +7,7 @@ import 'package:dartz/dartz.dart';
 
 class AdviceRepoImpl implements AdviceRepo {
   final AdviceRemoteDatasource adviceRemoteDatasource;
+
   AdviceRepoImpl({required this.adviceRemoteDatasource});
 
   @override

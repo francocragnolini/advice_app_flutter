@@ -22,6 +22,7 @@ class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
         Uri.parse("https://api.flutter-community.com/api/v1/advice"),
         headers: {
           "content-type": 'application/json',
+          "Access-Control-Allow-Origin": "*",
         });
     if (response.statusCode != 200) {
       throw ServerException();
