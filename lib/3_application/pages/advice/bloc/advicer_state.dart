@@ -3,7 +3,7 @@ part of 'advicer_bloc.dart';
 @immutable
 abstract class AdvicerState extends Equatable {
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class AdvicerInitial extends AdvicerState {}

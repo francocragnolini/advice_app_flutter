@@ -28,19 +28,6 @@ class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
         (advice) => emit(AdvicerStateLoaded(advice: advice.advice)),
       );
     });
-
-    // on<AdviceRequestedEvent>((event, emit) async {
-    //   when the user press the button
-    //   1- start loading spinner
-    //   emit(AdvicerStateLoading());
-    //   2- execute some business logic
-    //   for example get an advice
-    //   debugPrint("fake get advice triggered");
-    //   await Future.delayed(const Duration(seconds: 3), (() {}));
-    //   debugPrint("got advice");
-    //   emit(AdvicerStateLoaded(advice: "fake advice to test bloc"));
-    //    emit(AdvicerStateError(message: "error message"));
-    // });
   }
 
   String _mapFailureToMessage(Failure failure) {

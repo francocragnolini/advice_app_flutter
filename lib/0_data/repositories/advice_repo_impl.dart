@@ -18,7 +18,6 @@ class AdviceRepoImpl implements AdviceRepo {
     } on ServerException catch (_) {
       return left(ServerFailure());
     } catch (e) {
-      // handle the exception
       return left(GeneralFailure());
     }
   }

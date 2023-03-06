@@ -73,17 +73,15 @@ class AdvicerPage extends StatelessWidget {
                 ),
               ),
             ),
-            /*ErrorMessage(message: "Uupss Something went wrong")*/
-            /*AdviceField(
-                      advice: "example advice - your day will be good")*/
-            /*CircularProgressIndicator(
-                color: themeData.colorScheme.secondary,
-              )*/
-            /*Text(
-                  "Your Advice is waiting for you",
-                  style: themeData.textTheme.headline1,
-                ),*/
-            const SizedBox(height: 200, child: Center(child: CustomButton())),
+            SizedBox(
+              height: 200,
+              child: Center(
+                child: CustomButton(
+                  onTap: () => BlocProvider.of<AdvicerBloc>(context)
+                      .add(AdviceRequestedEvent()),
+                ),
+              ),
+            ),
           ],
         ),
       ),

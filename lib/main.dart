@@ -1,10 +1,11 @@
-import 'package:advice_flutter_app/3_application/pages/advice/advicer_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:advice_flutter_app/theme.dart';
-import '3_application/core/services/theme_service.dart';
 import 'injection.dart' as di; // dependency injection
+import '3_application/core/services/theme_service.dart';
+import 'package:advice_flutter_app/theme.dart';
+
+import 'package:advice_flutter_app/3_application/pages/advice/advicer_page.dart';
 
 void main() async {
   // ! dependecy injection

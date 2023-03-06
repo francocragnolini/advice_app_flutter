@@ -1,16 +1,18 @@
-import 'package:advice_flutter_app/3_application/pages/advice/bloc/advicer_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
+// modificaciones para widget testing
+// el boton debe recibir el bloc provider via constructor en el onTap function
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  const CustomButton({super.key, this.onTap});
+
+  final Function? onTap;
 
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
     return InkResponse(
-      onTap: () =>
-          BlocProvider.of<AdvicerBloc>(context).add(AdviceRequestedEvent()),
+      // onTap: onTap?.call(),
+      onTap: () => onTap?.call(),
       child: Material(
         elevation: 20,
         borderRadius: BorderRadius.circular(15),
